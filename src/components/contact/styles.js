@@ -18,10 +18,9 @@ export const Container = styled.div`
   h1 {
     z-index: 11;
     margin-bottom: 20px;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 45px;
     font-weight: 900;
-
     margin-top: 40px;
   }
 
