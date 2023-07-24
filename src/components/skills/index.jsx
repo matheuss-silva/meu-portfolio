@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, BackgroundFade, Content, SkillList } from "./styles";
 
+// Importando os ícones das tecnologias e linguagens de programação
 import {
   DiJavascript1,
   DiReact,
@@ -26,13 +27,15 @@ import {
 
 const Skills = () => {
   return (
-    
     <Container>
       <BackgroundFade />
+      {/* Título da seção de habilidades */}
       <h1>Habilidades</h1>
+      {/* Descrição da seção de habilidades */}
       <p>Algumas das tecnologias e Linguagens de Programação que eu uso!</p>
       <Content>
         <SkillList>
+          {/* Ícones das tecnologias */}
           <BiLogoFlutter size={"90px"} />
           <SiDart size={"90px"} />
           <DiJavascript1 size={"90px"} />
@@ -40,6 +43,7 @@ const Skills = () => {
           <DiPython size={"90px"} />
         </SkillList>
         <SkillList>
+          {/* Ícones das tecnologias */}
           <DiFirebase size={"90px"} />
           <DiMysql size={"90px"} />
           <DiMongodb size={"90px"} />
