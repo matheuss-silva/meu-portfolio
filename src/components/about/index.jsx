@@ -6,12 +6,12 @@ const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v168
 
 const About = () => {
   // Link para o documento CV (Curriculum Vitae)
-  const documentLink = "https://docs.google.com/document/d/11PzcGsNIw_wgFY4k2R_9xGqSv_Y2kFncXhPZh61lGNI/edit";
+  //const documentLink = "https://docs.google.com/document/d/11PzcGsNIw_wgFY4k2R_9xGqSv_Y2kFncXhPZh61lGNI/edit";
 
   // Função para abrir o link do CV em uma nova aba
-  const handleWhatsAppClick = () => {
-    window.open(documentLink, "_blank");
-  };
+  //const handleWhatsAppClick = () => {
+  //  window.open(documentLink, "_blank");
+  //};
 
   return (
     <Container>
@@ -37,7 +37,7 @@ const About = () => {
           <IconContainer>
             <div>
               {/* Botão para baixar o CV */}
-              <button onClick={handleWhatsAppClick}>Baixar CV</button>
+              <button onClick={null}>Baixar CV</button>
             </div>
           </IconContainer>
         </div>

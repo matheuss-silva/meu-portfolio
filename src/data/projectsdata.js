@@ -20,20 +20,20 @@ export const projects = [
   {
     title: "DoaPalmas",
     description:
-      " Uma plataforma!",
+      "Aplicativo de doações: facilita doações de móveis, eletrodomésticos e eletrônicos em Palmas, TO.",
     image:
       "https://res.cloudinary.com/dho0yyj47/image/upload/v1689640402/projeto003_puvvwn.jpg",
-    link: "https://github.com/matheuss-silva",
+    link: "https://github.com/matheuss-silva/doa-palmas",
     subtitle: "Flutter, Dart, Firebase, API google maps",
   },
   {
     title: "My-Health-Map",
     description:
-      "Termo de Abertura do Projeto - O projeto está estruturado em um software que localize unidades básicas de saúde e médicos mais próximos a partir da localização do solicitante.",
+      "Termo de Abertura do Projeto - Desenvolvimento de um software para localizar unidades básicas de saúde e médicos próximos ao usuário.",
     image:
       "https://res.cloudinary.com/dho0yyj47/image/upload/v1689640406/projeto004_reatok.jpg",
     link: "https://github.com/matheuss-silva/My-Health-Map",
     subtitle: "Document",
-  },
+  }, 
 ];
 

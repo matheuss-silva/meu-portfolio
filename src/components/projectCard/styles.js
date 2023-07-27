@@ -20,9 +20,19 @@ export const Container = styled.div`
   flex-direction: column;
 
   .content1 {
-    opacity: 0;
-
+    opacity: 1;
     z-index: 999;
+    display: none;
+  }
+
+  /* Mostra o conteúdo quando o mouse está sobre o elemento */
+  .content1.show {
+    opacity: 1;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   :hover {

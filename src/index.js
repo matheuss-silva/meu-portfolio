@@ -16,9 +16,7 @@ const Root = () => {
   );
 };
 
-const rootElement = document.getElementById("root");
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Root />
   </React.StrictMode>
