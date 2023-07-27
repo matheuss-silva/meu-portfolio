@@ -4,35 +4,43 @@ import { Container, Content, Info, Dest } from "./styles";
 import { AiOutlineLink } from "react-icons/ai";
 
 const ProjectCard = ({ title, image, link, desc, subtitle }) => {
-  const [isHovering, setIsHovering] = useState(false);
+  // Estado para controlar a visibilidade das descrições
+  const [showDescription, setShowDescription] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
-
+  // Função para abrir o link do projeto em uma nova aba ao clicar no card
   const openNewTab = () => {
     const url = link;
     window.open(url, "_blank");
   };
 
+  // Função para mostrar as descrições quando o mouse estiver sobre o card
+  const handleMouseEnter = () => {
+    setShowDescription(true);
+  };
+
+  // Função para ocultar as descrições quando o mouse sair do card
+  const handleMouseLeave = () => {
+    setShowDescription(false);
+  };
+
   return (
     <Container
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       onClick={openNewTab}
       $imageSrc={image}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <Dest className={`content1 ${isHovering ? "show" : ""}`}>
-        <Content className={`content1 ${isHovering ? "show" : ""}`}>
+      <Dest className={showDescription ? "content1 show" : "content1"}>
+        <Content className={showDescription ? "content1 show" : "content1"}>
+          {/* Título do projeto */}
           <h1>{title}</h1>
+          {/* Descrição do projeto */}
           <p>{desc}</p>
         </Content>
-        <Info className={`content1 ${isHovering ? "show" : ""}`}>
+        <Info className={showDescription ? "content1 show" : "content1"}>
+          {/* Ícone do link */}
           <AiOutlineLink title={link} className="icon" />
+          {/* Tecnologias/subtítulo do projeto */}
           <p className="techs">{subtitle}</p>
         </Info>
       </Dest>

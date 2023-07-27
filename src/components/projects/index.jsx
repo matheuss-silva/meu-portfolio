@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ProjectCard from "../projectCard";
 import { Container, BackgroundFade, Content } from "./styles";
 
 import { projects } from "../../data/projectsdata";
 
 const Projects = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    // Obtém a largura total do conteúdo
+    const contentWidth = scrollRef.current.scrollWidth;
+    // Obtém a largura visível do contêiner do scroll (Content)
+    const containerWidth = scrollRef.current.clientWidth;
+    // Calcula o valor inicial de scroll para posicionar o conteúdo no meio
+    const initialScrollLeft = (contentWidth - containerWidth) / 2;
+    // Define o scrollLeft para o valor inicial
+    scrollRef.current.scrollLeft = initialScrollLeft;
+  }, []);
+
   return (
     <Container>
       <BackgroundFade />
-      {/* Título da seção de projetos */}
       <h1>Projetos</h1>
-      {/* Descrição da seção de projetos */}
       <p>Aqui estão alguns dos meus projetos práticos favoritos!</p>
-      <Content>
-        {/* Mapeando a lista de projetos e criando um card para cada projeto */}
+      <Content ref={scrollRef}>
         {projects.map((project) => (
-          // Definindo a chave única para cada card (usando o título do projeto como chave)
           <ProjectCard
             key={project.title}
             title={project.title}

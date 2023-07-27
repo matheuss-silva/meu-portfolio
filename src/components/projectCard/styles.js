@@ -20,12 +20,12 @@ export const Container = styled.div`
   flex-direction: column;
 
   .content1 {
-    opacity: 1;
+    opacity: 0;
     z-index: 999;
     display: none;
   }
 
-  /* Mostra o conteúdo quando o mouse está sobre o elemento */
+  // Mostra o conteúdo quando a classe "show" está presente
   .content1.show {
     opacity: 1;
     transform: scale(1);
@@ -48,11 +48,15 @@ export const Container = styled.div`
     cursor: pointer;
   }
 
+  // Mostra o conteúdo em dispositivos móveis
   @media (max-width: 440px) {
-    min-width: 360px;
     .content1 {
       opacity: 1;
       transform: scale(1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
@@ -109,6 +113,13 @@ export const Content = styled.div`
 
   p {
     text-align: center;
+  }
+
+  @media (max-width: 440px) {
+    .content1 {
+      opacity: 0;
+      transform: scale(1);
+    }
   }
 `;
 
