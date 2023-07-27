@@ -43,6 +43,7 @@ export const BackgroundFade = styled.div`
 export const Content = styled.div`
   width: 100%;
   overflow-y: hidden;
+  overflow-x: scroll;
 
   z-index: 11;
 
