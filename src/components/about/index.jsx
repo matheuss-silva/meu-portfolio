@@ -21,7 +21,7 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-              Olá! Sou Matheus Silva, desenvolvedor fullstack de 21 anos, apaixonado 
+              Olá! Sou o Matheus Silva, desenvolvedor fullstack de 21 anos, apaixonado 
               por tecnologia e atualmente cursando Engenharia de Software.
             </AboutText>
             <AboutText>
