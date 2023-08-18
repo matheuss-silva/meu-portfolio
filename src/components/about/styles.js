@@ -141,12 +141,13 @@ export const IconContainer = styled.div`
 `;
 
 export const AboutTextContainer = styled.div`
+  padding: 20px 20px;
   padding-bottom: 0px; 
 `;
 
 export const AboutText = styled.p`
-padding-bottom: 2px;
-margin: 15px;
+padding-bottom: 0px;
+margin: 10px;
 `;
 
 
