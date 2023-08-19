@@ -30,7 +30,7 @@ const About = () => {
             </AboutText>
             <AboutText>
               Acredito na aprendizagem contínua para acompanhar as tendências tecnológicas. Se procura
-              um desenvolvedor fullstack comprometido e entusiasmado para contribuir com seu projeto, 
+              um desenvolvedor fullstack comprometido para contribuir com seu projeto, 
               estou aqui para ajudar.
             </AboutText>
           </AboutTextContainer>

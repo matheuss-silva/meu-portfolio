@@ -81,14 +81,16 @@ export const Card = styled.div`
 `;
 
 export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+align-content: flex-start; // Adicionado
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+
+@media (max-width: 768px) {
+  flex-direction: column;
+}
 
   div {
     flex: 1;
@@ -115,14 +117,16 @@ export const ProfileImage = styled.img`
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px; // Adicionado para garantir espaço suficiente abaixo do botão
+  z-index: 10; // Adicionado para garantir que esteja acima de outros elementos
 
-  > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-  }
+> div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
 
   button {
     display: flex;
@@ -141,13 +145,14 @@ export const IconContainer = styled.div`
 `;
 
 export const AboutTextContainer = styled.div`
-  padding: 20px 20px;
-  padding-bottom: 0px; 
+padding: 20px 20px;
+padding-bottom: 5px; 
+z-index: 10; // Adicionado para garantir que esteja acima de outros elementos
+overflow: auto; // Adicionado para permitir rolagem se necessário
 `;
 
 export const AboutText = styled.p`
-padding-bottom: 0px;
-margin: 10px;
+margin: 2px;
 `;
 
 
