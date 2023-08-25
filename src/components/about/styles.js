@@ -118,7 +118,7 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 20px; // Adicionado para garantir espaço suficiente abaixo do botão
+  margin-bottom: 5px; // Adicionado para garantir espaço suficiente abaixo do botão
   z-index: 10; // Adicionado para garantir que esteja acima de outros elementos
 
 > div {
