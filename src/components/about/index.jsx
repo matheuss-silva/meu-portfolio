@@ -21,17 +21,18 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-              Olá! Sou o Matheus Silva, desenvolvedor fullstack de 21 anos, apaixonado 
-              por tecnologia e atualmente cursando Engenharia de Software.
+            Olá! Sou Matheus Silva, desenvolvedor fullstack de 21 anos, atualmente cursando 
+            Engenharia de Software. Esta formação tem enriquecido ainda mais meu conhecimento 
+            técnico.
             </AboutText>
             <AboutText>
-              Já tive experiências como freelancer me permitiram colaborar em projetos e desenvolver
-              habilidades valiosas. Agora, meu foco é me tornar um especialista em desenvolvimento mobile.
+            Trabalhei em vários projetos como freelancer, o que aprimorou minha versatilidade 
+            e habilidade no mundo fullstack. Essas experiências me capacitaram a desenvolver 
+            soluções inovadoras para variados desafios.
             </AboutText>
             <AboutText>
-              Acredito na aprendizagem contínua para acompanhar as tendências tecnológicas. Se procura
-              um desenvolvedor fullstack comprometido para contribuir com seu projeto, 
-              estou aqui para ajudar.
+            Em um mundo tecnológico em constante evolução, valorizo a aprendizagem contínua. 
+            Estou pronto para colaborar com seu projeto.
             </AboutText>
           </AboutTextContainer>
           <IconContainer>
