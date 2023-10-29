@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Content, ProfileImage, IconContainer, AboutTextContainer, AboutText } from "./styles";
 
 // Link para a imagem do perfil
-const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v1689646531/perfil_vl7uhz.jpg";
+const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v1698550734/Untitled-1_pxgs3l.png";
 
 const About = () => {
   const documentLink = "https://www.linkedin.com/in/matheuss-silva2001/";
