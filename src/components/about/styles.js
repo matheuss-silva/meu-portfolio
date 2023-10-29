@@ -100,6 +100,7 @@ export const AboutTextContainer = styled.div`
 
 export const AboutText = styled.p`
   margin: 1px 0; // Reduzi a margem vertical
+  text-indent: 2em;
   @media (max-width: 768px) {
     max-height: calc(100vh - 320px); // Ajuste para dispositivos menores
   }

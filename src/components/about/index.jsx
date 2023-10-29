@@ -5,13 +5,10 @@ import { Container, Content, ProfileImage, IconContainer, AboutTextContainer, Ab
 const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v1689646531/perfil_vl7uhz.jpg";
 
 const About = () => {
-  // Link para o documento CV (Curriculum Vitae)
-  //const documentLink = "https://docs.google.com/document/d/11PzcGsNIw_wgFY4k2R_9xGqSv_Y2kFncXhPZh61lGNI/edit";
-
-  // Função para abrir o link do CV em uma nova aba
-  //const handleWhatsAppClick = () => {
-  //  window.open(documentLink, "_blank");
-  //};
+  const documentLink = "https://www.linkedin.com/in/matheuss-silva2001/";
+  const handleOpenClick = () => {
+  window.open(documentLink, "_blank");
+  };
 
   return (
     <Container>
@@ -38,7 +35,7 @@ const About = () => {
           <IconContainer>
             <div>
               {/* Botão para baixar o CV */}
-              <button onClick={null}>Baixar CV</button>
+              <button onClick={handleOpenClick}>Baixar CV</button>
             </div>
           </IconContainer>
         </div>
