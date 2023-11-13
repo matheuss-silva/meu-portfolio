@@ -5,7 +5,7 @@ import { Container, Content, ProfileImage, IconContainer, AboutTextContainer, Ab
 const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v1698550734/Untitled-1_pxgs3l.png";
 
 const About = () => {
-  const documentLink = "https://www.linkedin.com/in/matheuss-silva2001/";
+  const documentLink = "https://drive.google.com/file/d/1ioDJ2uOj7B0X1h8MYERNHq7nann0Ydoe/view?usp=sharing";
   const handleOpenClick = () => {
   window.open(documentLink, "_blank");
   };
