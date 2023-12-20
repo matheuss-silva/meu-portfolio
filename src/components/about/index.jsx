@@ -6,7 +6,7 @@ const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v169
 
 
 const About = () => {
-  const documentLink = "https://drive.google.com/file/d/1ioDJ2uOj7B0X1h8MYERNHq7nann0Ydoe/view?usp=sharing";
+  const documentLink = "https://drive.google.com/file/d/1xU8itJugRNhpysGWlLdrqZWEjAWVovHd/view?usp=sharing";
   const handleOpenClick = () => {
   window.open(documentLink, "_blank");
   };
@@ -19,14 +19,14 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-            Olá! Sou Matheus Silva, desenvolvedor fullstack de 21 anos, atualmente cursando 
-            Engenharia de Software. Esta formação tem enriquecido ainda mais meu conhecimento 
-            técnico.
+            Olá! Meu nome é Matheus Silva, sou um desenvolvedor fullstack
+            de 22 anos estou me formando em Engenharia de Software pela Ulbra Palmas. 
+            Esta formação tem enriquecido ainda mais meu conhecimento técnico.
             </AboutText>
             <AboutText>
-            Trabalhei em vários projetos como freelancer, o que aprimorou minha versatilidade 
-            e habilidade no mundo fullstack. Essas experiências me capacitaram a desenvolver 
-            soluções inovadoras para variados desafios.
+            Trabalhei em vários projetos como freelancer, o que aprimorou minha versatilidade e 
+            habilidade no mundo fullstack. Essas experiências me capacitaram a desenvolver soluções
+            inovadoras para variados desafios.
             </AboutText>
             <AboutText>
             Em um mundo tecnológico em constante evolução, valorizo a aprendizagem contínua. 
