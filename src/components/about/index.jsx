@@ -36,7 +36,7 @@ const About = () => {
           <IconContainer>
             <div>
               {/* Botão para baixar o CV */}
-              <button onClick={handleOpenClick}>Baixar CV</button>
+              <button onClick={handleOpenClick}>Baixar Currículo</button>
             </div>
           </IconContainer>
         </div>
