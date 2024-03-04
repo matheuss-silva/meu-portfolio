@@ -25,7 +25,7 @@ const About = () => {
             </AboutText>
             <AboutText>
             Trabalhei em vários projetos como freelancer, o que aprimorou minha versatilidade e 
-            habilidade no mundo fullstack. Essas experiências me capacitaram a desenvolver soluções
+            habilidade no mundo fullstack. Essas experiências capacita-me a desenvolver soluções
             inovadoras para variados desafios.
             </AboutText>
             <AboutText>
