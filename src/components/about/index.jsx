@@ -30,7 +30,7 @@ const About = () => {
             </AboutText>
             <AboutText>
             Em um mundo tecnológico em constante evolução, valorizo a aprendizagem contínua. 
-            Estou pronto para colaborar com seu projeto.
+            Estou pronto para colaborar com seu projeto!
             </AboutText>
           </AboutTextContainer>
           <IconContainer>
