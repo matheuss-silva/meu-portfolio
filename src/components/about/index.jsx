@@ -19,7 +19,7 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-            Olá! Meu nome é Matheus Silva, sou um desenvolvedor fullstack
+            Olá! Meu nome é Matheus Silva123, sou um desenvolvedor fullstack
             de 22 anos estou me formando em Engenharia de Software pela Ulbra Palmas. 
             Esta formação tem enriquecido ainda mais meu conhecimento técnico.
             </AboutText>
