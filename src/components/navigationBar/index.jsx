@@ -29,16 +29,16 @@ const NavigationBar = () => {
         <NavButton onClick={() => goToPosition(0)}>
           Inicio
         </NavButton>
-        <NavButton onClick={() => goToPosition(height + 100)}>
+        <NavButton onClick={() => goToPosition(height + 250)}>
           Projetos
         </NavButton>
-        <NavButton onClick={() => goToPosition(height * 2 + 200)}>
+        <NavButton onClick={() => goToPosition(height * 2 + 400)}>
           Sobre
         </NavButton>
-        <NavButton onClick={() => goToPosition(height * 3 + 200)}>
+        <NavButton onClick={() => goToPosition(height * 3 + 400)}>
           Habilidades
         </NavButton>
-        <NavButton onClick={() => goToPosition(height * 4 + 200)}>
+        <NavButton onClick={() => goToPosition(height * 4 + 400)}>
           Contato
         </NavButton>
       </Buttons>

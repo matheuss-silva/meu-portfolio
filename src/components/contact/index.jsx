@@ -12,7 +12,7 @@ import {
 import {
   RiWhatsappLine,
   RiMapPin2Line,
-  RiGithubLine,
+  RiGitlabLine,
   RiInstagramLine,
   RiLinkedinBoxLine,
 } from "react-icons/ri";
@@ -20,7 +20,7 @@ import {
 const Contact = () => {
   // Funções de manipulação de eventos para abrir links em uma nova aba
   const handleGithub = () => {
-    window.open("https://github.com/matheuss-silva", "_blank");
+    window.open("https://gitlab.com/matheuss-silva", "_blank");
   };
 
   const handleInstagram = () => {
@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   const handleLinkedin = () => {
-    window.open("https://www.linkedin.com/in/matheus-silva-471221277/", "_blank");
+    window.open("https://www.linkedin.com/in/matheuss-silva2001/", "_blank");
   };
 
   const handleWhatsApp = () => {
@@ -54,7 +54,7 @@ const Contact = () => {
           <LinksContainer>
             {/* Links para as redes sociais */}
             <Links onClick={handleGithub}>
-              <RiGithubLine size={"47px"} />
+              <RiGitlabLine size={"47px"} />
             </Links>
             <Links onClick={handleInstagram}>
               <RiInstagramLine size={"47px"} />
@@ -69,7 +69,7 @@ const Contact = () => {
         </Content>
       </Container>
       <Footer>
-        <p>Desenvolvido por Matheus Silva &copy; 2023</p>
+        <p>Desenvolvido por Matheus Silva &copy; 2025</p>
       </Footer>
     </>
   );

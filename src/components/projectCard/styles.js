@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-  
 
-  height: 400px;
-  width: 360px;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4/3; 
+  height: auto;
 
-  margin: 0px 20px;
+  margin: 0 auto;
+  border-radius: 8px; /* 🔽 borda arredondada */
+  overflow: hidden; /* garante que imagem/overlay siga a borda */
 
-  background-image: url(${(props) => props.$imageSrc}); /* Usando o prefixo $ */
+  background-image: url(${(props) => props.$imageSrc});
   background-size: cover;
   background-position: center;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   flex-direction: column;
 
   .content1 {
@@ -25,7 +27,6 @@ export const Container = styled.div`
     display: none;
   }
 
-  // Mostra o conteúdo quando a classe "show" está presente
   .content1.show {
     opacity: 1;
     transform: scale(1);
@@ -42,13 +43,20 @@ export const Container = styled.div`
     }
 
     .fade {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 1)
+      );
     }
 
     cursor: pointer;
   }
 
-  // Mostra o conteúdo em dispositivos móveis
+  @media (max-width: 768px) {
+    max-width: 100%; /* ocupa a largura total no mobile */
+  }
+
   @media (max-width: 440px) {
     .content1 {
       opacity: 1;
@@ -64,7 +72,7 @@ export const Container = styled.div`
 export const Info = styled.div`
   transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 
-  width: 360px;
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -84,20 +92,22 @@ export const Info = styled.div`
   }
 
   .techs {
-    font-size: 10px;
+    font-size: 12px;
   }
 
-  padding-left: 10px;
-  padding-right: 10px;
+  @media (max-width: 480px) {
+    .techs {
+      font-size: 10px;
+    }
+  }
 `;
 
 export const Content = styled.div`
   transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 
-  width: 360px;
+  width: 100%;
 
-  margin: 0px 20px;
-
+  margin: 0 auto;
   background: transparent;
 
   display: flex;
@@ -108,14 +118,31 @@ export const Content = styled.div`
 
   h1 {
     text-align: center;
-    font-size: 45px;
+    font-size: 28px;
   }
 
   p {
     text-align: center;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 
   @media (max-width: 440px) {
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 11px;
+    }
+
     .content1 {
       opacity: 0;
       transform: scale(1);
@@ -124,17 +151,17 @@ export const Content = styled.div`
 `;
 
 export const Dest = styled.div`
-  height: 400px;
-  width: 360px;
+  width: 100%;
+  height: 100%;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85); /* deixei mais escuro para melhor contraste */
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   flex-direction: column;
 
-  opacity: 0.3;
+  opacity: 0.4;
   transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 
   padding: 10px;

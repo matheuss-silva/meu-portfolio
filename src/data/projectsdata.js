@@ -1,39 +1,39 @@
 export const projects = [
   {
-    title: "Alerta PMW",
+    title: "PetMe-Up",
     description:
-      "Um aplicativo com foco na segurança pública, que tem como objetivo alertar o cidadão sobre as áreas com o maior índice de roubos e furtos na cidade.",
+      "A PetMe-Up foi desenvolvida para simplificar a entrega de produtos e serviços do segmento Pet. Através do aplicativo, você, Pai de Pet, têm acesso a tudo em um só lugar, podendo realizar pedidos e/ou agendamento de serviços.",
     image:
-      "https://res.cloudinary.com/dho0yyj47/image/upload/v1689640392/projeto001_cvwfmy.jpg",
-    link: "https://github.com/matheuss-silva/AlertaPMW",
-    subtitle: "Flutter, Dart, Firebase, API google maps",
+      "https://res.cloudinary.com/dho0yyj47/image/upload/v1757080839/Captura_de_tela_2025-09-05_104748_nra1yp.png",
+    link: "https://play.google.com/store/apps/details?id=petmeup.app.cliente&hl=pt_BR",
+    subtitle: "Flutter, Dart, Firebase, API REST",
   },
   {
-    title: "iTeachON",
+    title: "Agente",
     description:
-      "Modelagem de Software - iTeachON - A plataforma iTeachON é responsável por facilitar o aprendizado em inúmeras áreas",
+      "Com o Agente, você pode compartilhar vídeos curtos que destacam suas habilidades esportivas e interagir com uma comunidade de atletas.",
     image:
-      "https://res.cloudinary.com/dho0yyj47/image/upload/v1689640397/projeto002_wxdkac.jpg",
-    link: "https://github.com/matheuss-silva/Modelagem",
-    subtitle: "Document",
+      "https://res.cloudinary.com/dho0yyj47/image/upload/v1757080954/Captura_de_tela_2025-09-05_104139_rm8kj3.png",
+    link: "https://play.google.com/store/apps/details?id=dix.digital.oagente&hl=pt_BR",
+    subtitle: "Flutter, Dart, Firebase, API REST",
   },
   {
-    title: "DoaPalmas",
+    title: "Lanche Bem",
     description:
-      "Aplicativo de doações: facilita doações de móveis, eletrodomésticos e eletrônicos em Palmas, TO.",
+      "A Lanche Bem foi criada para ajudar as crianças e os pais na alimentação escolar, gerando intervalos mais rápidos e com menos filas, educação financeira e uma alimentação mais equilibrada.",
     image:
-      "https://res.cloudinary.com/dho0yyj47/image/upload/v1689640402/projeto003_puvvwn.jpg",
-    link: "https://github.com/matheuss-silva/doa-palmas",
-    subtitle: "Flutter, Dart, Firebase, API google maps",
+      "https://res.cloudinary.com/dho0yyj47/image/upload/v1757080805/unnamed_lbkqxl.webp",
+    link: "https://play.google.com/store/apps/details?id=dix.digital.lanchebem&hl=pt_BR",
+    subtitle: "Flutter, Dart, Firebase, API REST",
   },
   {
-    title: "My-Health-Map",
+    title: "Fy Imóveis",
     description:
-      "Termo de Abertura do Projeto - Desenvolvimento de um software para localizar unidades básicas de saúde e médicos próximos ao usuário.",
+      "O Fy Imóveis é o aplicativo feito sob medida para corretores de imóveis que desejam modernizar sua rotina, aumentar sua carteira de clientes e fechar mais negócios com praticidade e agilidade.",
     image:
-      "https://res.cloudinary.com/dho0yyj47/image/upload/v1689640406/projeto004_reatok.jpg",
-    link: "https://github.com/matheuss-silva/My-Health-Map",
-    subtitle: "Document",
+      "https://res.cloudinary.com/dho0yyj47/image/upload/v1757080752/download_capqln.webp",
+    link: "https://play.google.com/store/apps/details?id=dix.digital.fyimoveis&hl=pt_BR",
+    subtitle: "Flutter, Dart, Firebase, API REST",
   }, 
 ];
 

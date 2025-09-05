@@ -14,10 +14,11 @@ const Header = () => {
       <Background src={backgroundLink} />
       {/* Conteúdo do cabeçalho */}
       <Content>
-        <span className="welcome-text">Bem vindo!👋 Eu sou o</span>
+        <span className="welcome-text">Bem-vindo! 👋 Eu sou o</span>
         <h1>Matheus Silva</h1>
-        <span className="up">FullStack Developer</span>
+        <span className="up">Desenvolvedor Front-End</span>
       </Content>
+
     </Container>
   );
 };

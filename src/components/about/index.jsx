@@ -6,7 +6,7 @@ const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v169
 
 
 const About = () => {
-  const documentLink = "https://drive.google.com/file/d/1xU8itJugRNhpysGWlLdrqZWEjAWVovHd/view?usp=sharing";
+  const documentLink = "https://drive.google.com/file/d/1GifS5EAmKabXyu83NFJb06l-Murt62_g/view?usp=sharing";
   const handleOpenClick = () => {
   window.open(documentLink, "_blank");
   };
@@ -19,18 +19,22 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-            Olá! Meu nome é Matheus Silva123, sou um desenvolvedor fullstack
-            de 22 anos estou me formando em Engenharia de Software pela Ulbra Palmas. 
-            Esta formação tem enriquecido ainda mais meu conhecimento técnico.
+              Olá! Meu nome é Matheus Silva, sou Desenvolvedor Front-End Júnior
+              formado em Engenharia de Software pela Ulbra Palmas. Possuo experiência
+              no desenvolvimento de aplicativos Android e iOS utilizando Flutter e Dart,
+              sempre com foco em qualidade, usabilidade e boas práticas de código.
             </AboutText>
             <AboutText>
-            Trabalhei em vários projetos como freelancer, o que aprimorou minha versatilidade e 
-            habilidade no mundo fullstack. Essas experiências capacita-me a desenvolver soluções
-            inovadoras para variados desafios.
+              Atuo no desenvolvimento de soluções mobile, incluindo criação de
+              funcionalidades, aprimoramento de recursos existentes, integração de
+              APIs REST e manutenção de aplicações em produção. Também possuo
+              conhecimentos adicionais em React Native, Kotlin, React.js e bancos
+              de dados relacionais e não relacionais.
             </AboutText>
             <AboutText>
-            Em um mundo tecnológico em constante evolução, valorizo a aprendizagem contínua. 
-            Estou pronto para colaborar com seu projeto!
+              Acredito na aprendizagem contínua e na colaboração em equipe para
+              entregar resultados consistentes. Estou preparado para contribuir em
+              projetos desafiadores e gerar valor por meio da tecnologia.
             </AboutText>
           </AboutTextContainer>
           <IconContainer>

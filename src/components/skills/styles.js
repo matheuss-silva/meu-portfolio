@@ -17,9 +17,10 @@ export const Container = styled.div`
   h1 {
     z-index: 11;
     margin-bottom: 20px;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 40px;
     font-weight: 900;
+    text-align: center;
   }
 
   p {
@@ -27,6 +28,18 @@ export const Container = styled.div`
     opacity: 0.7;
     text-align: center;
     max-width: 80%;
+  }
+
+  /* Ajustes para telas pequenas */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -45,11 +58,14 @@ export const Content = styled.div`
   width: 100vw;
 
   margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const SkillList = styled.div`
   display: flex;
-
   justify-content: center;
   align-items: center;
 
@@ -57,6 +73,7 @@ export const SkillList = styled.div`
 
   svg {
     opacity: 0.5;
+    font-size: 80px; /* desktop padrão */
 
     transition: 0.9s cubic-bezier(0.39, 0.575, 0.565, 1);
 
@@ -64,6 +81,13 @@ export const SkillList = styled.div`
       transform: scale(1.07);
       opacity: 1;
       margin-right: 10px;
+    }
+  }
+
+  /* Ajustes para celular */
+  @media (max-width: 480px) {
+    svg {
+      font-size: 50px; /* ícones menores */
     }
   }
 `;

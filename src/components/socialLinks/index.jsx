@@ -3,7 +3,7 @@ import { Container, Content, Links } from "./styles";
 
 import {
   AiOutlineInstagram,
-  AiOutlineGithub,
+  AiOutlineGitlab,
   AiFillLinkedin,
 } from "react-icons/ai";
 
@@ -39,11 +39,11 @@ const SocialLinks = () => {
 
   // Funções para abrir os links em uma nova aba ao clicar nos ícones
   const openLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/matheus-silva-471221277/", "_blank");
+    window.open("https://www.linkedin.com/in/matheuss-silva2001/", "_blank");
   };
 
   const openGitHub = () => {
-    window.open("https://github.com/matheuss-silva", "_blank");
+    window.open("https://gitlab.com/matheuss-silva", "_blank");
   };
 
   const openInstagram = () => {
@@ -56,7 +56,7 @@ const SocialLinks = () => {
       <Content>
         {/* Ícone do GitHub */}
         <Links onClick={openGitHub}>
-          <AiOutlineGithub size={"38px"} />
+          <AiOutlineGitlab size={"38px"} />
         </Links>
         {/* Ícone do Instagram */}
         <Links onClick={openInstagram}>

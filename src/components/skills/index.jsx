@@ -34,22 +34,22 @@ const Skills = () => {
       {/* Descrição da seção de habilidades */}
       <p>Algumas das tecnologias e Linguagens de Programação que eu uso!</p>
       <Content>
-        <SkillList>
-          {/* Ícones das tecnologias */}
-          <BiLogoFlutter size={"90px"} />
-          <SiDart size={"90px"} />
-          <DiJavascript1 size={"90px"} />
-          <DiReact size={"90px"} />
-          <DiPython size={"90px"} />
-        </SkillList>
-        <SkillList>
-          {/* Ícones das tecnologias */}
-          <DiFirebase size={"90px"} />
-          <DiMysql size={"90px"} />
-          <DiMongodb size={"90px"} />
-          <DiAws size={"90px"} />
-          <BsFiletypeSql size={"90px"} />
-        </SkillList>
+<SkillList>
+  {/* Ícones das tecnologias */}
+  <BiLogoFlutter />
+  <SiDart />
+  <DiJavascript1 />
+  <DiReact />
+  <DiPython />
+</SkillList>
+<SkillList>
+  {/* Ícones das tecnologias */}
+  <DiFirebase />
+  <DiMysql />
+  <DiMongodb />
+  <DiAws />
+  <BsFiletypeSql />
+</SkillList>
       </Content>
     </Container>
   );
