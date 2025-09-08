@@ -28,7 +28,7 @@ export const Container = styled.div`
     opacity: 0.7;
     text-align: center;
     max-width: 80%;
-    font-size: 1px;
+    font-size: 14px;
   }
 
   /* Ajustes para telas menores */
