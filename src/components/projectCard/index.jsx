@@ -1,50 +1,46 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Container, Content, Info, Dest } from "./styles";
-
 import { AiOutlineLink } from "react-icons/ai";
 
 const ProjectCard = ({ title, image, link, desc, subtitle }) => {
-  // Estado para controlar a visibilidade das descrições
   const [showDescription, setShowDescription] = useState(false);
 
-  // Função para abrir o link do projeto em uma nova aba ao clicar no card
-  const openNewTab = () => {
-    const url = link;
-    window.open(url, "_blank");
-  };
-
-  // Função para mostrar as descrições quando o mouse estiver sobre o card
-  const handleMouseEnter = () => {
-    setShowDescription(true);
-  };
-
-  // Função para ocultar as descrições quando o mouse sair do card
-  const handleMouseLeave = () => {
-    setShowDescription(false);
-  };
+  const openNewTab = () => window.open(link, "_blank");
 
   return (
-    <Container
-      onClick={openNewTab}
-      $imageSrc={image}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    <motion.div
+      whileHover={{ scale: 1.05 }} // zoom suave no card
+      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+      style={{ width: "100%", maxWidth: "480px" }}
     >
-      <Dest className={showDescription ? "content1 show" : "content1"}>
-        <Content className={showDescription ? "content1 show" : "content1"}>
-          {/* Título do projeto */}
-          <h1>{title}</h1>
-          {/* Descrição do projeto */}
-          <p>{desc}</p>
-        </Content>
-        <Info className={showDescription ? "content1 show" : "content1"}>
-          {/* Ícone do link */}
-          <AiOutlineLink title={link} className="icon" />
-          {/* Tecnologias/subtítulo do projeto */}
-          <p className="techs">{subtitle}</p>
-        </Info>
-      </Dest>
-    </Container>
+      <Container
+        onClick={openNewTab}
+        $imageSrc={image}
+        onMouseEnter={() => setShowDescription(true)}
+        onMouseLeave={() => setShowDescription(false)}
+      >
+        <Dest>
+          {/* Tudo (conteúdo + rodapé) entra junto na animação */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: showDescription ? 1 : 0, y: showDescription ? 0 : 20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}
+          >
+            <Content>
+              <h1>{title}</h1>
+              <p>{desc}</p>
+            </Content>
+
+            <Info>
+              <AiOutlineLink title={link} className="icon" />
+              <p className="techs">{subtitle}</p>
+            </Info>
+          </motion.div>
+        </Dest>
+      </Container>
+    </motion.div>
   );
 };
 
