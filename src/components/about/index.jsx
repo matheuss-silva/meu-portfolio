@@ -6,7 +6,7 @@ const profileImageLink = "https://res.cloudinary.com/dho0yyj47/image/upload/v169
 
 
 const About = () => {
-  const documentLink = "https://drive.google.com/file/d/1GifS5EAmKabXyu83NFJb06l-Murt62_g/view?usp=sharing";
+  const documentLink = "https://docs.google.com/document/d/1qjamWzYbee0-jj6SiVNMKZ_iwl4LeKrL6AgZIYCLAVA/edit?usp=sharing";
   const handleOpenClick = () => {
   window.open(documentLink, "_blank");
   };
@@ -19,22 +19,20 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-              Olá! Meu nome é Matheus Silva, sou Desenvolvedor Front-End Júnior
-              formado em Engenharia de Software pela Ulbra Palmas. Possuo experiência
-              no desenvolvimento de aplicativos Android e iOS utilizando Flutter e Dart,
-              sempre com foco em qualidade, usabilidade e boas práticas de código.
+              Olá! Meu nome é Matheus Silva, sou Desenvolvedor Front-End Júnior 
+              formado em Engenharia de Software pela Ulbra Palmas. 
+              Tenho experiência no desenvolvimento de aplicativos Android e iOS com 
+              Flutter e Dart, sempre priorizando qualidade, usabilidade e boas práticas de código.
             </AboutText>
             <AboutText>
-              Atuo no desenvolvimento de soluções mobile, incluindo criação de
-              funcionalidades, aprimoramento de recursos existentes, integração de
-              APIs REST e manutenção de aplicações em produção. Também possuo
-              conhecimentos adicionais em React Native, Kotlin, React.js e bancos
+              Atuo no desenvolvimento de soluções mobile, englobando implementação de funcionalidades, 
+              aprimoramento de recursos existentes, integração de APIs REST e manutenção de aplicações 
+              em produção. Além disso, possuo conhecimentos em React Native, Kotlin, React.js e bancos 
               de dados relacionais e não relacionais.
             </AboutText>
             <AboutText>
-              Acredito na aprendizagem contínua e na colaboração em equipe para
-              entregar resultados consistentes. Estou preparado para contribuir em
-              projetos desafiadores e gerar valor por meio da tecnologia.
+              Acredito no aprendizado contínuo e na colaboração em equipe como pilares para entregar 
+              resultados consistentes e gerar valor por meio da tecnologia.
             </AboutText>
           </AboutTextContainer>
           <IconContainer>
