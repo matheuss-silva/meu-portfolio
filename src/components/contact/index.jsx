@@ -69,7 +69,7 @@ const Contact = () => {
         </Content>
       </Container>
       <Footer>
-        <p>Desenvolvido por Matheus Silva &copy; 2025</p>
+        <p>Desenvolvido por Matheus Silva &copy; 2026</p>
       </Footer>
     </>
   );

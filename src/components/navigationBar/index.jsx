@@ -1,46 +1,32 @@
 import React from "react";
 import { Container, Buttons, Logo, NavButton } from "./styles";
 
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-
 const logoLink =
   "https://res.cloudinary.com/dho0yyj47/image/upload/v1689299753/logoM_sadcat.png";
 
 const NavigationBar = () => {
-  // Hook personalizado para obter as dimensões da janela do navegador
-  const { height } = useWindowDimensions();
+  const goToSection = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
 
-  // Função para rolar suavemente para uma determinada posição
-  const goToPosition = (position) => {
-    window.scrollTo({
-      top: position,
+    el.scrollIntoView({
       behavior: "smooth",
+      block: "start",
     });
   };
 
   return (
-    // Componente da barra de navegação
     <Container>
-      {/* Logo */}
-      <Logo src={logoLink} />
-      
-      {/* Botões de navegação */}
+      <Logo src={logoLink} alt="Logo" />
+
       <Buttons>
-        <NavButton onClick={() => goToPosition(0)}>
-          Inicio
-        </NavButton>
-        <NavButton onClick={() => goToPosition(height + 250)}>
-          Projetos
-        </NavButton>
-        <NavButton onClick={() => goToPosition(height * 2 + 400)}>
-          Sobre
-        </NavButton>
-        <NavButton onClick={() => goToPosition(height * 3 + 400)}>
+        <NavButton onClick={() => goToSection("inicio")}>Inicio</NavButton>
+        <NavButton onClick={() => goToSection("projetos")}>Projetos</NavButton>
+        <NavButton onClick={() => goToSection("sobre")}>Sobre</NavButton>
+        <NavButton onClick={() => goToSection("habilidades")}>
           Habilidades
         </NavButton>
-        <NavButton onClick={() => goToPosition(height * 4 + 400)}>
-          Contato
-        </NavButton>
+        <NavButton onClick={() => goToSection("contato")}>Contato</NavButton>
       </Buttons>
     </Container>
   );

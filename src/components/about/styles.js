@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ export const Content = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     flex: 1;
     max-width: 600px;
     margin: 20px;
@@ -116,7 +116,9 @@ export const AboutTextContainer = styled.div`
   padding: 10px 20px 0px 20px;
   z-index: 10;
   flex: 1;
-  max-height: calc(100vh - 320px); 
+
+  /* Removido: max-height que causava sobreposição no mobile */
+  max-height: none;
 
   @media (max-width: 768px) {
     padding: 15px 10px;

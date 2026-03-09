@@ -55,7 +55,7 @@ export const BackgroundFade = styled.div`
 
 export const Content = styled.div`
   z-index: 111;
-  width: 100vw;
+  width: 100%;
 
   margin-top: 40px;
 

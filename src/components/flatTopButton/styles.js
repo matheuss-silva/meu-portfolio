@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 
   display: flex;
   justify-content: center;
@@ -31,15 +31,15 @@ export const Container = styled.div`
   }
 
   @media (max-width: 640px) {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 
-    bottom: 50px;
-    right: 30px;
+    bottom: 40px;
+    right: 20px;
 
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 20px !important;
+      height: 20px !important;
     }
   }
 `;

@@ -89,3 +89,156 @@ export const Content = styled.div`
     gap: 20px;
   }
 `;
+
+export const ButtonContainer = styled.div`
+  z-index: 11;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding-right: 20px;
+
+  @media (max-width: 480px) {
+    padding-right: 10px;
+  }
+`;
+
+export const StyledButton = styled.button`
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 11;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+    margin-bottom: 30px;
+  }
+`;
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85); /* darken background */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow: hidden; /* Evita que o click e segure/scroll mova a home por trás */
+  overscroll-behavior: none; /* Bloqueia o transbordo de rolagem nesta área */
+`;
+
+export const ModalContent = styled.div`
+  background: #111;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90vh;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-out forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+export const ModalHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1a1a1a;
+  
+  h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 20px;
+    h2 {
+      font-size: 20px;
+    }
+  }
+`;
+
+export const ModalCloseButton = styled.button`
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+`;
+
+export const ModalGrid = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain; /* Trava as instâncias de scroll somente nesta div */
+  padding: 30px;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+
+  /* Estilização da barra de rolagem para navegadores Webkit (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #111;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #111;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+`;

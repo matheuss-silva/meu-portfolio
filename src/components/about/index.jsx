@@ -19,20 +19,16 @@ const About = () => {
         <div>
           <AboutTextContainer>
             <AboutText>
-              Olá! Meu nome é Matheus Silva, sou Desenvolvedor Front-End Júnior 
-              formado em Engenharia de Software pela Ulbra Palmas. 
-              Tenho experiência no desenvolvimento de aplicativos Android e iOS com 
-              Flutter e Dart, sempre priorizando qualidade, usabilidade e boas práticas de código.
+              Sou Desenvolvedor Mobile com foco em Flutter, atuando no desenvolvimento de aplicações Android e iOS com ênfase em performance, arquitetura e qualidade de código. Graduado em Engenharia de Software, construo interfaces modernas, funcionais e responsivas, aplicando princípios de escalabilidade e boas práticas de engenharia.
             </AboutText>
             <AboutText>
-              Atuo no desenvolvimento de soluções mobile, englobando implementação de funcionalidades, 
-              aprimoramento de recursos existentes, integração de APIs REST e manutenção de aplicações 
-              em produção. Além disso, possuo conhecimentos em React Native, Kotlin, React.js e bancos 
-              de dados relacionais e não relacionais.
+              Atualmente atuo como Desenvolvedor Front-end, desenvolvendo e mantendo aplicações mobile publicadas na Play Store e App Store, além de projetos front-end web utilizando Vue.js. Trabalho na evolução contínua dos sistemas, com foco em estabilidade, organização arquitetural e melhoria do fluxo de entrega.
             </AboutText>
             <AboutText>
-              Acredito no aprendizado contínuo e na colaboração em equipe como pilares para entregar 
-              resultados consistentes e gerar valor por meio da tecnologia.
+              Possuo experiência sólida com Flutter e Dart, aplicando Clean Architecture, integração com APIs REST, Firebase e autenticação segura (JWT e OAuth). No front-end web, atuo na construção de interfaces reativas e componentizadas com Vue.js. Também trabalho com gerenciamento de estado (Provider e conhecimentos em BLoC), versionamento com Git, Code Review e metodologias ágeis (Scrum/Kanban), além de práticas básicas de CI/CD para automação de builds.
+            </AboutText>
+            <AboutText>
+              Estou aberto a novas oportunidades em Desenvolvimento Front-end e Mobile, especialmente em projetos que priorizem qualidade técnica, arquitetura bem estruturada e experiência do usuário.
             </AboutText>
           </AboutTextContainer>
           <IconContainer>

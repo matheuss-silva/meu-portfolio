@@ -15,14 +15,33 @@ const HomePage = () => {
   return (
     <Container>
       <NavigationBar />
-      <Header />
+
+      <section id="inicio">
+        <Header />
+      </section>
+
       <Separator />
-      <Projects />
+
+      <section id="projetos">
+        <Projects />
+      </section>
+
       <SocialLinks />
+
       <Separator />
-      <About />
-      <Skills />
-      <Contact />
+
+      <section id="sobre">
+        <About />
+      </section>
+
+      <section id="habilidades">
+        <Skills />
+      </section>
+
+      <section id="contato">
+        <Contact />
+      </section>
+
       <FlatTopButton />
     </Container>
   );

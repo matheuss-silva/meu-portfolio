@@ -4,17 +4,20 @@ import styled from "styled-components";
 export const Dest = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+
+  /* Escurece somente quando showDescription estiver ativo */
+  background: ${({ $active }) =>
+    $active ? "rgba(0, 0, 0, 0.52)" : "rgba(0, 0, 0, 0.2)"};
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
 
-  transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
   padding: 20px;
+  position: relative;
 
-  position: relative; 
+  transition: background 0.4s ease;
 `;
 
 /* Conteúdo central: título + descrição */
@@ -24,7 +27,7 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   gap: 12px;
 
@@ -44,17 +47,25 @@ export const Content = styled.div`
     color: #f5f5f5;
     max-width: 90%;
     margin: 0;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   }
 
   @media (max-width: 768px) {
-    h1 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
-    p  { font-size: clamp(1rem, 2.3vw, 1.0625rem); }
+    h1 {
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    }
+    p {
+      font-size: clamp(1rem, 2.3vw, 1.0625rem);
+    }
   }
 
   @media (max-width: 440px) {
-    h1 { font-size: 1.125rem; }
-    p  { font-size: 1rem; }
+    h1 {
+      font-size: 1.125rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -67,7 +78,7 @@ export const Info = styled.div`
   align-items: center;
 
   padding: 8px 12px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 
   margin-top: auto; /* garante que fique no rodapé do motion.div */
 
@@ -90,7 +101,9 @@ export const Info = styled.div`
   }
 
   @media (max-width: 480px) {
-    .techs { font-size: 0.8125rem; }
+    .techs {
+      font-size: 0.8125rem;
+    }
   }
 `;
 
@@ -133,14 +146,8 @@ export const Container = styled.div`
   }
 
   :hover {
-    .content1 {
-      opacity: 1;
-      transform: scale(1);
-      display: flex;
-    }
-
     ${Dest} {
-      background: rgba(0, 0, 0, 0.78);
+      background: rgba(0, 0, 0, 0.82);
     }
 
     cursor: pointer;

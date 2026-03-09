@@ -41,7 +41,7 @@ const FlatTopButton = () => {
   return (
     // Botão de seta para cima com ação para rolar para o topo
     <Container scrollVisible={isVisible} onClick={goToTop}>
-      <AiOutlineArrowUp size={"40px"} />
+      <AiOutlineArrowUp size={"24px"} />
     </Container>
   );
 };
