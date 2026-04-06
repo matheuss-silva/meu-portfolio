@@ -101,19 +101,61 @@ export const Localize = styled.div`
 export const Links = styled.div`
   height: 55px;
   margin: 0px 20px;
+  position: relative;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s ease, background 0.28s ease;
 
   opacity: 0.7;
+  transform-origin: center;
+  will-change: transform, opacity;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.12),
+      transparent 70%
+    );
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.3s ease, transform 0.35s ease;
+    pointer-events: none;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.32s ease;
+    will-change: transform, filter;
+  }
 
   :hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: translateY(-3px) scale(1.06);
     opacity: 1;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    svg {
+      transform: scale(1.08);
+      filter: drop-shadow(0 6px 14px rgba(255, 255, 255, 0.18));
+    }
+  }
+
+  :active {
+    transform: translateY(-1px) scale(1.02);
   }
 `;
 

@@ -1,4 +1,33 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const typing = keyframes`
+  0%,
+  10% {
+    width: 0;
+  }
+
+  45%,
+  55% {
+    width: 23ch;
+  }
+
+  90%,
+  100% {
+    width: 0;
+  }
+`;
+
+const blinkCursor = keyframes`
+  0%,
+  49% {
+    border-color: currentColor;
+  }
+
+  50%,
+  100% {
+    border-color: transparent;
+  }
+`;
 
 export const Background = styled.img`
   object-fit: cover;
@@ -32,13 +61,7 @@ export const Content = styled.div`
     line-height: 75px;
     font-weight: 900;
     text-align: center;
-  }
-
-  .up {
-    color: ${(props) => props.theme.main};
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
+    margin: 8px 0 18px;
   }
 
   /* Ajustes para telas pequenas */
@@ -46,10 +69,6 @@ export const Content = styled.div`
     h1 {
       font-size: 40px;
       line-height: 48px;
-    }
-
-    .up {
-      font-size: 18px;
     }
 
     .welcome-text {
@@ -70,5 +89,27 @@ export const Container = styled.div`
 
   .welcome-text {
     font-size: 22px;
+  }
+`;
+
+export const TypingText = styled.span`
+  display: inline-block;
+  width: 0;
+  min-height: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid ${(props) => props.theme.main};
+  color: ${(props) => props.theme.main};
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-align: center;
+  animation:
+    ${typing} 5s steps(23) infinite,
+    ${blinkCursor} 0.8s step-end infinite;
+
+  @media (max-width: 480px) {
+    min-height: 28px;
+    font-size: 18px;
   }
 `;

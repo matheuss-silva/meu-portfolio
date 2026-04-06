@@ -42,14 +42,15 @@ const Contact = () => {
       <Container>
         <BackgroundFade />
         <h1>Entre em Contato</h1>
-        <p>Será um prazer receber uma mensagem sua. <br></br>
+        <p>
+          Será um prazer receber uma mensagem sua. <br></br>
           Envie sua proposta, questionamentos ou ideias. <br></br>
           Farei o melhor para respondê-lo(a) o quanto antes!
         </p>
         <Content>
           <Localize>
             <RiMapPin2Line size={"27px"} />
-            <p>Palmas - Tocantins</p>
+            <p>Entre em Contato</p>
           </Localize>
           <LinksContainer>
             {/* Links para as redes sociais */}

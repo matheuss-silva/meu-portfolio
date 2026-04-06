@@ -89,25 +89,36 @@ export const IconContainer = styled.div`
   }
 
   button {
-    display: flex;
-    padding: 10px 20px;
-    background-color: #054f77;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 210px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #f75231, #ff8a65);
     color: #fff;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 16px 30px rgba(247, 82, 49, 0.24);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+      filter 0.3s ease;
 
     &:hover {
-      background-color: rgb(204, 0, 0);
+      transform: translateY(-3px);
+      box-shadow: 0 22px 36px rgba(247, 82, 49, 0.32);
+      filter: brightness(1.06);
     }
   }
 
   @media (max-width: 480px) {
     button {
+      min-width: 0;
+      width: 100%;
       font-size: 14px;
-      padding: 8px 16px;
+      padding: 10px 16px;
     }
   }
 `;

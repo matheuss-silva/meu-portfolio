@@ -27,6 +27,15 @@ export const projects = [
     link: "https://play.google.com/store/apps/details?id=dix.digital.lanchebem&hl=pt_BR",
     subtitle: "Flutter, Dart, Firebase, API REST",
   },
+  {
+    title: "Netcare",
+    description:
+      "Em um mundo onde o acesso à saúde e aos serviços financeiros é muitas vezes desigual, a Netcare busca eliminar essa disparidade, oferecendo uma plataforma inclusiva e acessível a todos.",
+    image:
+      "https://res.cloudinary.com/dho0yyj47/image/upload/v1775479381/Captura_de_tela_2026-04-06_094252_e4jkx2.png",
+    link: "https://play.google.com/store/apps/details?id=dix.com.netcare.app",
+    subtitle: "Flutter, Dart, Firebase, API REST",
+  },
 
   {
     title: "PetMe-Up|Parceiro",
@@ -46,15 +55,7 @@ export const projects = [
     link: "https://d-piocera.dixid.digital/",
     subtitle: "Vue.js, JavaScript, Node.js, API REST",
   },
-  {
-    title: "Netcare",
-    description:
-      "Em um mundo onde o acesso à saúde e aos serviços financeiros é muitas vezes desigual, a Netcare busca eliminar essa disparidade, oferecendo uma plataforma inclusiva e acessível a todos.",
-    image:
-      "https://res.cloudinary.com/dho0yyj47/image/upload/v1775479381/Captura_de_tela_2026-04-06_094252_e4jkx2.png",
-    link: "https://play.google.com/store/apps/details?id=dix.com.netcare.app",
-    subtitle: "Flutter, Dart, Firebase, API REST",
-  },
+
   {
     title: "CP Recomenda",
     description: "Aplicativo exclusivo para vendedores da Casas Pedro.",

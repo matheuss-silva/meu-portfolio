@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
   width: 100%;
@@ -90,43 +91,64 @@ export const Content = styled.div`
   }
 `;
 
+export const ProjectItem = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 export const ButtonContainer = styled.div`
   z-index: 11;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 18px;
   margin-bottom: 50px;
-  padding-right: 20px;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    max-width: 480px;
+    justify-content: center;
+    padding: 0 20px;
+  }
 
   @media (max-width: 480px) {
-    padding-right: 10px;
+    padding: 0 10px;
   }
 `;
 
 export const StyledButton = styled.button`
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  background: linear-gradient(135deg, #f75231, #ff8a65);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
-  padding: 12px 32px;
-  border: 2px solid #fff;
-  border-radius: 8px;
+  letter-spacing: 0.02em;
+  padding: 12px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  box-shadow: 0 16px 30px rgba(247, 82, 49, 0.24);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    filter 0.3s ease;
   z-index: 11;
 
   &:hover {
-    background: #fff;
-    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 22px 36px rgba(247, 82, 49, 0.32);
+    filter: brightness(1.06);
   }
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
     padding: 10px 24px;
     margin-bottom: 30px;
+    min-width: 0;
   }
 `;
 
