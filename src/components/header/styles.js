@@ -36,8 +36,7 @@ export const Background = styled.img`
 `;
 
 export const BackgroundFade = styled.div`
-  height: 100vh;
-  width: 100%;
+  inset: 0;
 
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
 
@@ -45,8 +44,8 @@ export const BackgroundFade = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 100%;
-  width: 100%;
+  inset: 0;
+  padding: 0 20px;
 
   position: absolute;
 
@@ -64,11 +63,23 @@ export const Content = styled.div`
     margin: 8px 0 18px;
   }
 
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 56px;
+      line-height: 62px;
+    }
+
+    .welcome-text {
+      font-size: 18px;
+    }
+  }
+
   /* Ajustes para telas pequenas */
   @media (max-width: 480px) {
     h1 {
-      font-size: 40px;
-      line-height: 48px;
+      font-size: clamp(34px, 11vw, 42px);
+      line-height: 1.12;
+      margin: 6px 0 14px;
     }
 
     .welcome-text {
@@ -80,6 +91,9 @@ export const Content = styled.div`
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
 
   background: transparent;
 
@@ -89,6 +103,10 @@ export const Container = styled.div`
 
   .welcome-text {
     font-size: 22px;
+  }
+
+  @media (max-width: 768px) {
+    height: 100svh;
   }
 `;
 
@@ -108,8 +126,14 @@ export const TypingText = styled.span`
     ${typing} 5s steps(23) infinite,
     ${blinkCursor} 0.8s step-end infinite;
 
+  @media (max-width: 768px) {
+    min-height: 32px;
+    font-size: 22px;
+  }
+
   @media (max-width: 480px) {
     min-height: 28px;
-    font-size: 18px;
+    max-width: calc(100vw - 40px);
+    font-size: clamp(16px, 5vw, 18px);
   }
 `;

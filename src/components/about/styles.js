@@ -25,11 +25,18 @@ export const Container = styled.div`
   }
 
   /* Ajustes para celular */
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 76px 18px 64px;
+  }
+
   @media (max-width: 480px) {
+    padding: 64px 16px 56px;
+
     h1 {
       font-size: 28px;
       line-height: 34px;
-      margin: 20px;
+      margin: 0 0 24px;
     }
 
     p {
@@ -43,12 +50,15 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1080px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 22px;
   }
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -57,7 +67,8 @@ export const Content = styled.div`
     margin: 20px;
 
     @media (max-width: 768px) {
-      margin: 15px;
+      width: 100%;
+      margin: 0;
     }
   }
 `;
@@ -65,13 +76,15 @@ export const Content = styled.div`
 export const ProfileImage = styled.img`
   width: 400px;
   height: auto;
+  max-width: min(400px, 42vw);
 
   @media (max-width: 768px) {
-    width: 200px;
+    width: min(240px, 62vw);
+    max-width: 100%;
   }
 
   @media (max-width: 480px) {
-    width: 150px; /* menor no celular */
+    width: min(180px, 58vw);
   }
 `;
 
@@ -80,6 +93,12 @@ export const IconContainer = styled.div`
   align-items: center;
   margin-top: 10px;
   z-index: 10;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    margin-top: 18px;
+  }
 
   > div {
     display: flex;
@@ -132,7 +151,7 @@ export const AboutTextContainer = styled.div`
   max-height: none;
 
   @media (max-width: 768px) {
-    padding: 15px 10px;
+    padding: 0;
   }
 `;
 
@@ -143,10 +162,11 @@ export const AboutText = styled.p`
   @media (max-width: 768px) {
     font-size: 14px;
     line-height: 22px;
+    text-indent: 0;
   }
 
   @media (max-width: 480px) {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 21px;
   }
 `;

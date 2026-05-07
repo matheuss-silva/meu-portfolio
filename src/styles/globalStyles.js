@@ -14,6 +14,21 @@ export default createGlobalStyle`
         background: ${(props) => props.theme.background};
         overflow-x: hidden;
     }
+
+    body{
+        min-width: 0;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img, svg{
+        max-width: 100%;
+    }
+
+    button{
+        font: inherit;
+    }
+
     a{
         text-decoration: none;
         color: ${(props) => props.theme.link}

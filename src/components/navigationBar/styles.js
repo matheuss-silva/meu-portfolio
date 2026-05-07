@@ -8,6 +8,13 @@ export const Buttons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 668px) {
+    height: 72px;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
 `;
 
 export const NavButton = styled.button`
@@ -18,6 +25,7 @@ export const NavButton = styled.button`
 
   padding: 4px 0px;
   cursor: pointer;
+  white-space: nowrap;
 
   transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 
@@ -26,6 +34,21 @@ export const NavButton = styled.button`
   :hover {
     border-bottom-color: white;
     letter-spacing: 1px;
+  }
+
+  @media (max-width: 668px) {
+    margin: 0;
+    padding: 8px 4px;
+    font-size: 13px;
+
+    :hover {
+      letter-spacing: 0;
+    }
+  }
+
+  @media (max-width: 380px) {
+    font-size: 12px;
+    padding: 8px 2px;
   }
 `;
 
@@ -54,15 +77,15 @@ export const Container = styled.div`
   z-index: 11;
 
   @media (max-width: 668px) {
+    height: 72px;
+    padding: 0 12px;
+
     ${Logo} {
       display: none;
     }
 
     ${Buttons} {
-      width: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 `;

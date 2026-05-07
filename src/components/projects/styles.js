@@ -34,9 +34,12 @@ export const Container = styled.div`
 
   /* Ajustes para telas menores */
   @media (max-width: 768px) {
+    padding: 78px 18px 66px;
+
     h1 {
       font-size: 32px;
       line-height: 40px;
+      margin-bottom: 14px;
     }
 
     p {
@@ -46,6 +49,8 @@ export const Container = styled.div`
   }
 
   @media (max-width: 480px) {
+    padding: 66px 16px 56px;
+
     h1 {
       font-size: 26px;
       line-height: 32px;
@@ -83,10 +88,10 @@ export const Content = styled.div`
     grid-template-columns: 1fr; /* Mobile → 1 card por linha */
     gap: 25px;
     margin-top: 25px;
+    padding: 0;
   }
 
   @media (max-width: 480px) {
-    padding: 10px;
     gap: 20px;
   }
 `;
@@ -115,7 +120,7 @@ export const ButtonContainer = styled.div`
   }
 
   @media (max-width: 480px) {
-    padding: 0 10px;
+    padding: 0;
   }
 `;
 
@@ -150,6 +155,11 @@ export const StyledButton = styled.button`
     margin-bottom: 30px;
     min-width: 0;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 320px;
+  }
 `;
 
 export const ModalOverlay = styled.div`
@@ -167,6 +177,10 @@ export const ModalOverlay = styled.div`
   padding: 20px;
   overflow: hidden; /* Evita que o click e segure/scroll mova a home por trás */
   overscroll-behavior: none; /* Bloqueia o transbordo de rolagem nesta área */
+
+  @media (max-width: 480px) {
+    padding: 12px;
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -181,6 +195,11 @@ export const ModalContent = styled.div`
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.3s ease-out forwards;
+
+  @media (max-width: 480px) {
+    max-height: 90svh;
+    border-radius: 8px;
+  }
 
   @keyframes fadeIn {
     from {
@@ -213,6 +232,14 @@ export const ModalHeader = styled.div`
     padding: 15px 20px;
     h2 {
       font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 14px 16px;
+
+    h2 {
+      font-size: 18px;
     }
   }
 `;
@@ -262,5 +289,9 @@ export const ModalGrid = styled.div`
     grid-template-columns: 1fr;
     padding: 20px;
     gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 14px;
   }
 `;

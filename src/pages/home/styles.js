@@ -7,4 +7,10 @@ export const Container = styled.div`
   section {
     scroll-margin-top: 95px;
   }
+
+  @media (max-width: 668px) {
+    section {
+      scroll-margin-top: 72px;
+    }
+  }
 `;

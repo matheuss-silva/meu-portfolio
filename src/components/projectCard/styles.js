@@ -18,6 +18,14 @@ export const Dest = styled.div`
   position: relative;
 
   transition: background 0.4s ease;
+
+  @media (max-width: 480px) {
+    padding: 14px 16px;
+    background: ${({ $active }) =>
+      $active
+        ? "linear-gradient(180deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.42) 48%, rgba(0, 0, 0, 0.72))"
+        : "rgba(0, 0, 0, 0.28)"};
+  }
 `;
 
 /* Conteúdo central: título + descrição */
@@ -51,20 +59,30 @@ export const Content = styled.div`
   }
 
   @media (max-width: 768px) {
+    gap: 8px;
+
     h1 {
       font-size: clamp(1.125rem, 2.5vw, 1.375rem);
     }
     p {
-      font-size: clamp(1rem, 2.3vw, 1.0625rem);
+      font-size: 0.95rem;
+      line-height: 1.42;
+      max-width: 100%;
     }
   }
 
   @media (max-width: 440px) {
+    justify-content: flex-start;
+    padding-top: 4px;
+
     h1 {
-      font-size: 1.125rem;
+      font-size: 1.05rem;
+      line-height: 1.15;
     }
+
     p {
-      font-size: 1rem;
+      font-size: 0.78rem;
+      line-height: 1.28;
     }
   }
 `;
@@ -85,6 +103,7 @@ export const Info = styled.div`
   .icon {
     width: 22px;
     height: 22px;
+    flex: 0 0 auto;
     cursor: pointer;
     transition: 0.3s;
 
@@ -94,6 +113,7 @@ export const Info = styled.div`
   }
 
   .techs {
+    flex: 1;
     font-size: 0.85rem;
     line-height: 1.4;
     color: #e8e8e8;
@@ -101,8 +121,30 @@ export const Info = styled.div`
   }
 
   @media (max-width: 480px) {
+    margin-top: 10px;
+    padding: 8px 10px;
+    gap: 8px;
+    border-top: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.36);
+    backdrop-filter: blur(8px);
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      padding: 2px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
     .techs {
-      font-size: 0.8125rem;
+      font-size: 0.76rem;
+      line-height: 1.25;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 `;
@@ -155,9 +197,12 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     max-width: 100%;
+    aspect-ratio: 4/3;
   }
 
   @media (max-width: 440px) {
+    aspect-ratio: 4/3;
+
     .content1 {
       opacity: 1;
       transform: scale(1);

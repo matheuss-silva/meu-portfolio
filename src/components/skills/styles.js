@@ -96,7 +96,7 @@ export const SkillsGrid = styled.div`
 
   @media (max-width: 480px) {
     max-width: 320px;
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 `;
@@ -153,10 +153,11 @@ export const SkillCard = styled(motion.div)`
 
   @media (max-width: 480px) {
     gap: 10px;
+    width: 100%;
 
     .icon-wrapper {
-      width: 84px;
-      height: 84px;
+      width: min(84px, 28vw);
+      height: min(84px, 28vw);
       border-radius: 20px;
     }
 

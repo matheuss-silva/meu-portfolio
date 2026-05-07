@@ -30,8 +30,19 @@ export const Container = styled.div`
     line-height: 26px;
   }
 
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 76px 18px 56px;
+
+    p {
+      max-width: 720px;
+    }
+  }
+
   /* Ajuste para telas pequenas (celulares) */
   @media (max-width: 480px) {
+    padding: 64px 16px 48px;
+
     h1 {
       font-size: 28px;
       line-height: 36px;
@@ -75,6 +86,16 @@ export const Content = styled.div`
   border-radius: 7px;
 
   z-index: 11;
+
+  @media (max-width: 768px) {
+    width: min(100%, 520px);
+    margin-top: 34px;
+    padding: 26px 34px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 22px 16px;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -83,6 +104,11 @@ export const LinksContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 22px;
+
+  @media (max-width: 480px) {
+    justify-content: space-between;
+    gap: 8px;
+  }
 `;
 
 export const Localize = styled.div`
@@ -95,6 +121,12 @@ export const Localize = styled.div`
     fill: salmon;
     z-index: 111;
     margin-right: 10px;
+  }
+
+  @media (max-width: 480px) {
+    p {
+      max-width: none;
+    }
   }
 `;
 
@@ -157,6 +189,17 @@ export const Links = styled.div`
   :active {
     transform: translateY(-1px) scale(1.02);
   }
+
+  @media (max-width: 480px) {
+    height: 48px;
+    margin: 0;
+    flex: 1;
+
+    svg {
+      width: 38px;
+      height: 38px;
+    }
+  }
 `;
 
 export const Footer = styled.footer`
@@ -177,5 +220,16 @@ export const Footer = styled.footer`
   p {
     font-size: 14px;
     opacity: 0.7;
+  }
+
+  @media (max-width: 480px) {
+    height: auto;
+    min-height: 50px;
+    padding: 12px 16px;
+    text-align: center;
+
+    p {
+      line-height: 20px;
+    }
   }
 `;
