@@ -1,1 +1,24 @@
+# Nuxt dev/build outputs
+.nuxt
+.output
+.data
+dist
+
+# Node
 node_modules
+npm-debug.log*
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Editor/OS
+.claude
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

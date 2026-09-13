@@ -1,0 +1,82 @@
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.eyebrow--accent {
+  color: var(--accent);
+}
+
+.display-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(4.4rem, 10.5vw, 12.5rem);
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(2.6rem, 6vw, 5.6rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(241, 241, 237, 0.88);
+}
+
+:root[data-theme='light'] .text-outline {
+  -webkit-text-stroke: 1.5px rgba(10, 10, 8, 0.82);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(241, 241, 237, 0.88);
+  }
+
+  :root[data-theme='light'] .text-outline {
+    -webkit-text-stroke: 1px rgba(10, 10, 8, 0.82);
+  }
+}
+
+.editorial {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+p {
+  max-width: 60ch;
+}
