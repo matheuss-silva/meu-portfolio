@@ -17,6 +17,13 @@ const {
   onClickCapture,
   onKeydown
 } = useHorizontalScroll()
+
+defineExpose({
+  canScrollPrev,
+  canScrollNext,
+  scrollPrev,
+  scrollNext
+})
 </script>
 
 <template>
@@ -27,35 +34,6 @@ const {
       'carousel--animating': isAnimating
     }"
   >
-    <div class="carousel__header">
-      <div class="carousel__nav">
-        <button
-          type="button"
-          class="carousel__arrow"
-          :disabled="!canScrollPrev"
-          aria-label="Projeto anterior"
-          data-cursor-hover
-          @click="scrollPrev"
-        >
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          class="carousel__arrow"
-          :disabled="!canScrollNext"
-          aria-label="Próximo projeto"
-          data-cursor-hover
-          @click="scrollNext"
-        >
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
     <div class="carousel__viewport">
       <ul
         ref="track"
@@ -95,59 +73,9 @@ const {
 .carousel {
   --slide-gap: clamp(16px, 2vw, 28px);
   --slide-width: min(460px, calc(100% - 32px));
-  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
-}
-
-.carousel__header {
-  position: absolute;
-  right: calc(100% + clamp(32px, 5vw, 64px) + 24px);
-  bottom: 32px;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.carousel__nav {
-  display: flex;
-  gap: 10px;
-}
-
-.carousel__arrow {
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--surface);
-  display: grid;
-  place-items: center;
-  color: var(--text-primary);
-  transition:
-    color 260ms var(--ease-out),
-    border-color 260ms var(--ease-out),
-    background-color 260ms var(--ease-out),
-    transform 260ms var(--ease-out),
-    opacity 260ms var(--ease-out);
-}
-
-.carousel__arrow svg {
-  width: 16px;
-  height: 16px;
-}
-
-.carousel__arrow:not(:disabled):hover {
-  color: var(--accent-contrast);
-  border-color: var(--accent);
-  background: var(--accent);
-  transform: translateY(-2px);
-}
-
-.carousel__arrow:disabled {
-  cursor: default;
-  opacity: 0.28;
 }
 
 .carousel__viewport {
@@ -209,12 +137,6 @@ const {
   }
 }
 
-@media (max-width: 900px) {
-  .carousel__header {
-    right: calc(100% - var(--slide-width) + 20px);
-  }
-}
-
 @media (max-width: 560px) {
   .carousel {
     gap: 14px;
@@ -222,8 +144,7 @@ const {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .carousel__slide,
-  .carousel__arrow {
+  .carousel__slide {
     transition: none;
   }
 }

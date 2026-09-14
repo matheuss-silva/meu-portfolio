@@ -1,7 +1,35 @@
 <script setup>
-defineProps({
+const props = defineProps({
   project: { type: Object, required: true }
 })
+
+const isMobileProject = computed(() =>
+  props.project.category?.toLowerCase().includes('mobile')
+)
+
+const desktopImage = computed(
+  () => props.project.desktopImage || (!isMobileProject.value ? props.project.image : null)
+)
+
+const mobileImage = computed(
+  () => props.project.mobileImage || (isMobileProject.value ? props.project.image : null)
+)
+
+const hasDeviceMockup = computed(
+  () => Boolean(desktopImage.value || mobileImage.value)
+)
+
+const useCoverAsFallback = (event) => {
+  const image = event.currentTarget
+
+  if (props.project.image && image.dataset.fallbackApplied !== 'true') {
+    image.dataset.fallbackApplied = 'true'
+    image.src = props.project.image
+    return
+  }
+
+  image.style.visibility = 'hidden'
+}
 </script>
 
 <template>
@@ -15,8 +43,45 @@ defineProps({
       draggable="false"
     >
       <span class="project-card__placeholder">ADICIONE A CAPA DO PROJETO</span>
+
+      <div
+        v-if="hasDeviceMockup"
+        class="project-card__mockups"
+        :class="{
+          'project-card__mockups--desktop-only': desktopImage && !mobileImage,
+          'project-card__mockups--mobile-only': mobileImage && !desktopImage
+        }"
+      >
+        <div v-if="desktopImage" class="project-card__notebook">
+          <div class="project-card__notebook-lid">
+            <div class="project-card__notebook-screen">
+              <img
+                :src="desktopImage"
+                :alt="`${project.title} na versão desktop`"
+                loading="lazy"
+                draggable="false"
+                @error="useCoverAsFallback"
+              />
+            </div>
+          </div>
+          <div class="project-card__notebook-base" aria-hidden="true" />
+        </div>
+
+        <div v-if="mobileImage" class="project-card__phone">
+          <div class="project-card__phone-screen">
+            <img
+              :src="mobileImage"
+              :alt="`${project.title} na versão mobile`"
+              loading="lazy"
+              draggable="false"
+              @error="useCoverAsFallback"
+            />
+          </div>
+        </div>
+      </div>
+
       <img
-        v-if="project.image"
+        v-else-if="project.image"
         :src="project.image"
         :alt="`Capa do projeto ${project.title}`"
         loading="lazy"
@@ -119,6 +184,144 @@ defineProps({
     filter 500ms var(--ease-out);
   z-index: 1;
   -webkit-user-drag: none;
+}
+
+.project-card__mockups {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 105%, rgba(200, 255, 0, 0.13), transparent 52%),
+    #0b0b0d;
+  overflow: hidden;
+}
+
+.project-card__mockups::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+.project-card__notebook {
+  position: relative;
+  z-index: 1;
+  width: 76%;
+  transform: translateX(-4%);
+  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.46));
+  transition: transform 700ms var(--ease-spring);
+}
+
+.project-card__notebook-lid {
+  position: relative;
+  padding: 5px 5px 6px;
+  border: 1px solid #454545;
+  border-radius: 9px 9px 3px 3px;
+  background: linear-gradient(145deg, #363636, #171717);
+}
+
+.project-card__notebook-lid::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  z-index: 2;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #080808;
+  transform: translateX(-50%);
+}
+
+.project-card__notebook-screen {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 4px 4px 1px 1px;
+  background: #050505;
+}
+
+.project-card__notebook-screen img,
+.project-card__phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
+
+.project-card__notebook-base {
+  position: relative;
+  width: 110%;
+  height: 8px;
+  margin-left: -5%;
+  border-radius: 1px 1px 8px 8px;
+  background: linear-gradient(to bottom, #4a4a4a, #181818 72%);
+  clip-path: polygon(4% 0, 96% 0, 100% 72%, 98% 100%, 2% 100%, 0 72%);
+}
+
+.project-card__notebook-base::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15%;
+  height: 2px;
+  border-radius: 0 0 3px 3px;
+  background: #777;
+  transform: translateX(-50%);
+}
+
+.project-card__phone {
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+  z-index: 2;
+  width: 20%;
+  aspect-ratio: 9 / 19;
+  padding: 5px;
+  border: 1px solid #515151;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #393939, #101010);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.55);
+  transition: transform 700ms var(--ease-spring);
+}
+
+.project-card__phone::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  z-index: 2;
+  width: 34%;
+  height: 4px;
+  border-radius: 999px;
+  background: #080808;
+  transform: translateX(-50%);
+}
+
+.project-card__phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #050505;
+}
+
+.project-card__mockups--desktop-only .project-card__notebook {
+  width: 84%;
+  transform: none;
+}
+
+.project-card__mockups--mobile-only .project-card__phone {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  width: 27%;
 }
 
 .project-card__placeholder {
@@ -231,6 +434,18 @@ defineProps({
     filter: saturate(1.08) contrast(1.03);
   }
 
+  .project-card:hover .project-card__notebook {
+    transform: translate(-4%, -4px) scale(1.015);
+  }
+
+  .project-card:hover .project-card__mockups--desktop-only .project-card__notebook {
+    transform: translateY(-4px) scale(1.015);
+  }
+
+  .project-card:hover .project-card__phone {
+    transform: translate(-2px, -5px) rotate(-1deg);
+  }
+
   .project-card:hover .project-card__title {
     transform: translateX(4px);
   }
@@ -242,6 +457,8 @@ defineProps({
 
 @media (prefers-reduced-motion: reduce) {
   .project-card__image,
+  .project-card__notebook,
+  .project-card__phone,
   .project-card__link-icon,
   .project-card,
   .project-card::before,
